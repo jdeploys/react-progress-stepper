@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
-import styled, { StepContentTheme } from 'styled-components';
+import { StepContentTheme } from '../types';
+import styled  from 'styled-components';
 
 interface StepDescriptionProps {
   theme: StepContentTheme;

@@ -1,5 +1,6 @@
 import React, { cloneElement, ReactNode } from 'react';
-import styled, { css, StepTheme } from 'styled-components';
+import { StepTheme } from '../types';
+import styled, { css } from 'styled-components';
 
 interface StepperProps {
   vertical?: boolean;

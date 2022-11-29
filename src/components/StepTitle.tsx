@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
-import styled, { StepContentTheme } from 'styled-components';
+import styled from 'styled-components';
+import { StepContentTheme } from '../types';
 
 const StepTitleStyled = styled.p`
   margin: 0;

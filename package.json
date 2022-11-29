@@ -1,8 +1,7 @@
 {
-  "homepage": "https://github.com/vimercati-samir/react-progress-stepper.git",
-  "name": "react-progress-stepper",
+  "name": "@jdeploys/react-progress-stepper",
   "main": "dist/index.js",
-  "types": "./lib/esm/index.d.ts",
+  "types": "dist/index.d.ts",
   "version": "0.3.0",
   "private": false,
   "files": [
@@ -19,7 +18,8 @@
   "scripts": {
     "storybook": "start-storybook -p 6006 -s public",
     "clean": "rimraf dist",
-    "build": "npm run clean && tsc && cross-env NODE_ENV=production babel src --out-dir dist --copy-files --ignore \"__tests__,spec.js,test.js,stories.js,src/**/*.ts,src/**/.tsx,__snapshots__\"",
+    "build": "npm run clean && tsc && cross-env NODE_ENV=production babel src --out-dir dist --copy-files --ignore \"__tests__,spec.js,test.js,stories.js,src/**/*.ts,src/**/.tsx,__snapshots__\" && npm run clean:after-build",
+    "clean:after-build": "shx rm -rf dist/**/*.tsx && shx rm -rf src/**/*.js && shx rm -rf src/**/*.jsx && shx rm -rf src/**/*.d.ts",
     "predeploy": "npm run build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static",
     "build-storybook": "build-storybook"

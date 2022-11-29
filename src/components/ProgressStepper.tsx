@@ -1,3 +1,4 @@
+import CheckMark from './CheckMark';
 import Step from './Step';
 import StepDescription from './StepDescription';
 import StepNumber from './StepNumber';
@@ -6,4 +7,13 @@ import StepStatus from './StepStatus';
 import StepTitle from './StepTitle';
 import { useStepper } from './useStepper';
 
-export { Stepper, Step, useStepper, StepNumber, StepTitle, StepStatus, StepDescription };
+export {
+  Stepper,
+  Step,
+  useStepper,
+  StepNumber,
+  StepTitle,
+  StepStatus,
+  StepDescription,
+  CheckMark,
+};

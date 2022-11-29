@@ -1,5 +1,6 @@
 import React from 'react';
-import styled, { StepContentTheme } from 'styled-components';
+import styled from 'styled-components';
+import { StepContentTheme } from '../types';
 
 const StepStatusStyled = styled.p`
   display: inline-block;

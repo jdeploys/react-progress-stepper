@@ -1,6 +1,7 @@
 import React, { cloneElement, ReactNode } from 'react';
-import styled, { css, DefaultTheme, keyframes, StepTheme } from 'styled-components';
-import CheckMark from '@/src/components/CheckMark';
+import styled, { css, DefaultTheme, keyframes } from 'styled-components';
+import CheckMark from './CheckMark';
+import { StepTheme } from '../types';
 
 export interface StepProps {
   currentStep?: number;
@@ -12,7 +13,7 @@ export interface StepProps {
   numbered?: boolean;
   children: JSX.Element | JSX.Element[];
   customContent?: ReactNode;
-  theme: StepTheme;
+  theme?: StepTheme;
 }
 
 const animationOpacity = keyframes`
