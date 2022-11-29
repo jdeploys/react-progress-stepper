@@ -3,7 +3,7 @@ import { StepContentTheme } from '../types';
 import styled  from 'styled-components';
 
 interface StepDescriptionProps {
-  theme: StepContentTheme;
+  theme?: StepContentTheme;
   children: ReactNode;
 }
 
@@ -17,7 +17,7 @@ const StepDescription = (props: StepDescriptionProps) => {
   const { theme, children } = props;
 
   return (
-    <StepDescriptionStyled theme={theme.description} className="description">
+    <StepDescriptionStyled theme={theme?.description} className="description">
       {children}
     </StepDescriptionStyled>
   );

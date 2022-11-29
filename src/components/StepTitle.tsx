@@ -10,7 +10,7 @@ const StepTitleStyled = styled.p`
 `;
 
 interface StepTitleProps {
-  theme: StepContentTheme;
+  theme?: StepContentTheme;
   children: ReactNode;
 }
 
@@ -18,7 +18,7 @@ const StepTitle = (props: StepTitleProps) => {
   const { theme, children } = props;
 
   return (
-    <StepTitleStyled theme={theme.title} className="title">
+    <StepTitleStyled theme={theme?.title} className="title">
       {children}
     </StepTitleStyled>
   );

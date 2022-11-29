@@ -19,7 +19,7 @@ interface StepStatusProps {
   textProgress?: string;
   textCompleted?: string;
   textPending?: string;
-  theme: StepContentTheme;
+  theme?: StepContentTheme;
 }
 
 const StepStatus = (props: StepStatusProps) => {
@@ -50,7 +50,7 @@ const StepStatus = (props: StepStatusProps) => {
   };
 
   return (
-    <StepStatusStyled theme={theme.status} className="status">
+    <StepStatusStyled theme={theme?.status} className="status">
       {getText()}
     </StepStatusStyled>
   );

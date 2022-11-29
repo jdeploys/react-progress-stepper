@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { DefaultTheme, keyframes } from 'styled-components';
 
 interface CheckMarkerProps {
-  theme: DefaultTheme;
+  theme?: DefaultTheme;
 }
 
 const animateSuccessTip = keyframes`

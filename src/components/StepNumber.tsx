@@ -5,7 +5,7 @@ import styled from 'styled-components';
 interface StepNumberProps {
   text: string;
   currentStep: number;
-  theme: StepContentTheme;
+  theme?: StepContentTheme;
 }
 
 const StepNumberStyled = styled.p`
@@ -19,7 +19,7 @@ const StepNumber = (props: StepNumberProps) => {
   const { text, currentStep, theme } = props;
 
   return (
-    <StepNumberStyled theme={theme.stepNumber} className="step-number">{`${
+    <StepNumberStyled theme={theme?.stepNumber} className="step-number">{`${
       text || 'STEP'
     } ${currentStep}`}</StepNumberStyled>
   );

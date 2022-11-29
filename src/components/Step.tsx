@@ -204,7 +204,7 @@ const Step = (props: StepProps) => {
       <StepStyled
         isStepInProgress={isStepInProgress}
         isStepCompleted={isStepCompleted}
-        theme={theme.step[status]}
+        theme={theme?.step[status]}
         className={`step ${isStepInProgress ? 'progress' : ''}
       ${isStepCompleted ? 'completed' : ''} ${isStepPending ? 'pending' : ''}`}
       >
@@ -213,7 +213,7 @@ const Step = (props: StepProps) => {
             {!isStepCompleted && numbered && (
               <Number className="number">{currentStep}</Number>
             )}
-            {isStepCompleted && <CheckMark theme={theme.step.completed} />}
+            {isStepCompleted && <CheckMark theme={theme?.step.completed} />}
           </>
         ) : (
           <>{customContent}</>
@@ -233,7 +233,7 @@ const Step = (props: StepProps) => {
                         isStepInProgress: isStepInProgress,
                         isStepCompleted: isStepCompleted,
                         isStepPending: isStepPending,
-                        theme: theme.content[status],
+                        theme: theme?.content[status],
                       })}
                     </React.Fragment>
                   );
@@ -243,7 +243,7 @@ const Step = (props: StepProps) => {
                   isStepInProgress: isStepInProgress,
                   isStepCompleted: isStepCompleted,
                   isStepPending: isStepPending,
-                  theme: theme.content[status],
+                  theme: theme?.content[status],
                 })}
           </Content>
         )}
@@ -253,7 +253,7 @@ const Step = (props: StepProps) => {
           isStepInProgress={isStepInProgress}
           isStepCompleted={isStepCompleted}
           vertical={vertical}
-          theme={theme.progressBar[status]}
+          theme={theme?.progressBar[status]}
           className={`progress-bar ${isStepInProgress ? 'progress' : ''}
           ${isStepCompleted ? 'completed' : ''} ${isStepPending ? 'pending' : ''}`}
         />
